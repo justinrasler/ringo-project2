@@ -5,6 +5,7 @@ require('dotenv').config();
 //___________________
 const express = require('express');
 const methodOverride = require('method-override');
+const teams = require('./models/teams')
 const mongoose = require ('mongoose');
 const app = express();
 const db = mongoose.connection;
@@ -51,8 +52,12 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 //___________________
 //localhost:3000
 app.get('/' , (req, res) => {
-  res.send('Hello World!');
+  res.send('yoooooo!');
 });
+
+app.get('/teams', (req,res) => {
+  res.render('index.ejs', {allTeams: teams})
+})
 
 //___________________
 //Listener

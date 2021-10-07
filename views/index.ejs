@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/head.ejs") %>
+
+    <%- include("./partials/header.ejs") %>
+<body>
+    <ul>
+        <% for(let i = 0; i < allTeams.length; i++){ %>
+    <div class="card" style="width: 18rem;">
+        <img src="<%= allTeams[i].img %>"width="200" height="200" class="card-img-top" alt="...">
+        <div class="card-body">
+
+          
+       <li>
+           <a href="/teams/<%= i %>" class="btn btn-primary">
+           <%= allPokemon[i].name %>
+           </a>
+           <!-- <form action="/teams/<%= i %>?_method=DELETE" method="POST"> -->
+            <input type="submit" value="DELETE">
+        <!-- <br><a href="/pokemon/<%= i %>/edit">edit</a> -->
+        </form>
+       </li>
+       
+       
+        </div>
+      </div>
+      <% } %>
+           </ul>
+</body>
+</html>
+
