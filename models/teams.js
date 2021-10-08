@@ -1,19 +1,19 @@
 const teams = [
     {
         name:'Golden State Warriors',
-        rings: '6 [194719561975201520172018]',
+        rings: '6 [1947, 1956, 1975, 2015, 2017, 2018]',
         teamLogo: 'https://cdn.nba.com/logos/nba/1610612744/primary/L/logo.svg',
         bestPlayer: 'Steph Curry'
     },
     {
         name:'LA Clippers',
-        rings: 'red',
+        rings: '0',
         teamLogo: 'https://cdn.nba.com/logos/nba/1610612746/primary/L/logo.svg',
         bestPlayer: 'Kwame Brown'
     },
     {
         name:'Los Angeles Lakers',
-        rings: 'red',
+        rings: '17',
         teamLogo: 'https://cdn.nba.com/logos/nba/1610612747/primary/L/logo.svg',
         bestPlayer: 'Kwame Brown'
     },
@@ -91,7 +91,7 @@ const teams = [
     },
     {
         name:'Boston Celtics',
-        rings: 'red',
+        rings: '17',
         teamLogo: 'https://cdn.nba.com/logos/nba/1610612738/primary/L/logo.svg',
         bestPlayer: 'Kwame Brown'
     },
@@ -115,19 +115,19 @@ const teams = [
     },
     {
         name:'Toronto Raptors',
-        rings: 'red',
+        rings: '1',
         teamLogo: 'https://cdn.nba.com/logos/nba/1610612761/primary/L/logo.svg',
         bestPlayer: 'Kwame Brown'
     },
     {
         name:'Chicago Bulls',
-        rings: 'red',
+        rings: '6',
         teamLogo: 'https://cdn.nba.com/logos/nba/1610612741/primary/L/logo.svg',
         bestPlayer: 'Kwame Brown'
     },
     {
         name:'Cleveland Cavaliers',
-        rings: 'red',
+        rings: '1 😂',
         teamLogo: 'https://cdn.nba.com/logos/nba/1610612739/primary/L/logo.svg',
         bestPlayer: 'Kwame Brown'
     },

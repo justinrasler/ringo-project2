@@ -51,13 +51,18 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 // Routes
 //___________________
 //localhost:3000
+
+//index route
 app.get('/' , (req, res) => {
   res.render('index.ejs', {allTeams: teams});
 });
 
-// app.get('/teams', (req,res) => {
-//   res.render('index.ejs', {allTeams: teams})
-// })
+
+
+//show route
+app.get('/teams/:indexOfTeamsArray', (req,res) => {
+res.render('show.ejs', {team: teams[req.params.indexOfTeamsArray]})
+})
 
 //___________________
 //Listener
