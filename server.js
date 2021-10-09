@@ -75,6 +75,18 @@ teams.splice(req.params.indexOfTeamsArray,1);
 res.redirect('/teams')
 })
 
+//Edit route
+app.get('/teams/:indexOfTeamsArray/edit', (req,res) => {
+  res.render('edit.ejs', {
+    team: teams[req.params.indexOfTeamsArray],
+    index: req.params.indexOfTeamsArray
+  })
+})
+//update route
+app.put('/teams/:indexOfTeamsArray', (req,res) => {
+  teams[req.params.indexOfTeamsArray] = req.body;
+  res.redirect('/teams')
+})
 
 //show route
 app.get('/teams/:indexOfTeamsArray', (req,res) => {
