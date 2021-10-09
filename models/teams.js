@@ -6,7 +6,7 @@ const teams = [
         bestPlayer: 'Steph Curry'
     },
     {
-        name:'LA Clippers',
+        name:'Los Angeles Clippers',
         rings: '0',
         teamLogo: 'https://cdn.nba.com/logos/nba/1610612746/primary/L/logo.svg',
         bestPlayer: 'Kwame Brown'

@@ -53,10 +53,27 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 //localhost:3000
 
 //index route
-app.get('/' , (req, res) => {
+app.get('/teams' , (req, res) => {
   res.render('index.ejs', {allTeams: teams});
 });
 
+//new route
+app.get('/teams/new', (req,res) => {
+  res.render('new.ejs')
+});
+
+//create route
+app.post('/teams', (req,res) => {
+  teams.push(req.body)
+  // redirect (get) to /teams
+  res.redirect("/teams")
+  console.log(req.body)
+})
+//delete route
+app.delete('/teams/:indexOfTeamsArray', (req,res) => {
+teams.splice(req.params.indexOfTeamsArray,1);
+res.redirect('/teams')
+})
 
 
 //show route
