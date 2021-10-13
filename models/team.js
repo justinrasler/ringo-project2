@@ -14,8 +14,8 @@ const {Schema, model} = mongoose
 const teamsSchema = new Schema({
     name: String,
     rings: String,
-    logo: String,
-    bestPlayer: String
+    bestPlayer: String,
+    conference: String
 })
 
 // make model

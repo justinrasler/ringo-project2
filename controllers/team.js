@@ -26,18 +26,18 @@ router.use((req, res, next) => {
 /////////////////////////////////////////
 // Seed route
 router.get('/seed', (req, res)=> {
-    // array of starter chocolate
+    
     const startTeams = [
       {name: "Golden State Warriors", rings: "5", logo: "https://cdn.nba.com/logos/nba/1610612744/primary/L/logo.svg", bestPlayer: "Steph Curry"},
       {name: "Los Angeles Lakers", rings: "17", logo: "https://cdn.nba.com/logos/nba/1610612747/primary/L/logo.svg", bestPlayer: "Kareen Abdul Jabaur"},
 
     ]
     
-    // Delete all choco
+    // Delete all 
     Team.remove({}, (err, data) => {
-      // Seed Starter Choco
+      // Seed Starter
       Team.create(startTeams,(err, data) => {
-        // send created choco as response to confirm creation
+     
         res.json(data);
       }
       );
@@ -58,11 +58,11 @@ router.get("/", (req, res) => {
   
   
   
-  // Create Route (POST => /choco)
+  // Create Route (POST => /teams)
   router.post("/", (req, res) => {
     // add username to req.body to track related user
   req.body.username = req.session.username
-  // Create the Chocolate!
+  // Create the team
     Team.create(req.body, (err, team) => {
         // redirect the user back to the main fruits page after fruit created
         res.redirect("/teams")
@@ -74,30 +74,30 @@ router.get("/", (req, res) => {
   router.get("/:id/edit", (req, res) => {
     // get the id from params
     const id = req.params.id
-    // get the chocolate from the database
+    // get the team from the database
     Team.findById(id, (err, team) => {
         // render template and send it fruit
         res.render("teams/edit.ejs", {team})
     })
   })
 
-  // Update Route, (PUT => /choco/:id)
+  // Update Route, (PUT => /teams/:id)
   router.put("/:id", (req, res) => {
     // get the id from params
     const id = req.params.id
     
-    // update the chocolate
+    // update the team
     Team.findByIdAndUpdate(id, req.body, {new: true}, (err, team) => {
-        // redirect user back to main page when chocolate updates 
+        // redirect user back to main page
         res.redirect("/teams")
     })
   })
   
-  // Destroy (Delete => /choco/:id)
+  // Destroy (Delete => /teams/:id)
   router.delete("/:id", (req, res) => {
     // get the id from params
     const id = req.params.id
-    // delete the chocolate
+    // delete the team
    Team.findByIdAndRemove(id, (err, team) => {
         // redirect user back to index page
         res.redirect("/teams")

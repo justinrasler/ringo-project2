@@ -15,15 +15,14 @@
 
     <% for (team of teams) { %>
       <div class="card" style="width: 18rem;">
-        <img src="<%= team.logo %>"width="300" height="300" class="card-img-top" alt="...">
+        <!-- <img src="<%= team.logo %>"width="300" height="300" class="card-img-top" alt="..."> -->
         <div class="card-body">
 
         <a href="/teams/<%= team._id %>" class="btn btn-primary">
-          <%= team.name %>
+          <%= team.name %> <br> <br>
+          <%= team.conference %> conference
         </a><br>
-        <a href="/teams/<%= team._id %>/edit" class="btn btn-primary">EDIT</a>
-        <br><form action="/teams/<%= team._id %>?_method=DELETE" method="POST">
-          <br><input type="submit" value="DELETE">
+
       </div>
      </div>   
       <% } %>

@@ -6,7 +6,7 @@
   <ul>
       <div id="centerdiv">
   <div class="card" style="width: 18rem;">
-      <img src="<%= team.logo %>"width="300" height="300" class="card-img-top" alt="...">
+      <!-- <img src="<%= team.logo %>"width="300" height="300" class="card-img-top" alt="..."> -->
       <div class="card-body">
 
         
@@ -15,9 +15,14 @@
          <br>
          rings: <%= team.rings %>
          <br>
-         <%= team.bestPlayer %>
+         best Player: <%= team.bestPlayer %>
+         <br>
+         conference: <%= team.conference %> conference
          </a>
-        <br> <a href="/teams" class="btn btn-primary">back</a>
+         <br><a href="/teams/<%= team._id %>/edit" class="btn btn-primary">EDIT</a>
+         <br><br><form action="/teams/<%= team._id %>?_method=DELETE" method="POST">
+           <input type="submit" value="DELETE">
+<a href="/teams" class="btn btn-primary">back</a>
       </form>
      </li>
      

@@ -13,16 +13,8 @@ const Team = require("./team")
   
     // create array of starter
     const startTeams = [
-      {name: "Golden State Warriors", rings: "5", logo:
-      {
-          data: Buffer,
-          contentType: String
-      }, bestPlayer: "Steph Curry"},
-      {name: "Los Angeles Lakers", rings: "17", logo:
-      {
-          data: Buffer,
-          contentType: String
-      }, bestPlayer: "Kareen Abdul Jabaur"},
+      {name: "Golden State Warriors", rings: "5", logo: "https://cdn.nba.com/logos/nba/1610612744/primary/L/logo.svg", bestPlayer: "Steph Curry", confernce: "western"},
+      {name: "Los Angeles Lakers", rings: "17", logo: "https://cdn.nba.com/logos/nba/1610612747/primary/L/logo.svg", bestPlayer: "Kareen Abdul Jabaur", confernce: "western"},
       
     ];
   
