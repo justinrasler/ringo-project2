@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("../partials/head.ejs") %>
+
+  <%- include("../partials/header.ejs") %>
+  <%- include("../partials/showstyle.ejs") %>
+
+  <body>
+    <main>
+      <div>
+        <form action="/teams/<%= team._id %>?_method=PUT" method="post">
+          <input type="url" name="teamLogo" value="<%= team.teamLogo %>"/><br>
+          <input type="text" name="name" value="<%= team.name %>"/><br>
+         <input type="text" name="rings"  value="<%= team.rings %>"/><br>
+         <input type="text" name="bestPlayer" value="<%= team.bestPlayer %>"/><br>
+            <input type="submit" value="submit changes"/>
+          <a href="/teams/"><button>Back to Main</button></a>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

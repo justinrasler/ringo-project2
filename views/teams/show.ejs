@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("../partials/head.ejs") %>
+<%- include("../partials/header.ejs") %>
+<body>
+  <ul>
+      <div id="centerdiv">
+  <div class="card" style="width: 18rem;">
+      <img src="<%= team.logo %>"width="300" height="300" class="card-img-top" alt="...">
+      <div class="card-body">
+
+        
+     <li>
+         <%= team.name %>
+         <br>
+         rings: <%= team.rings %>
+         <br>
+         <%= team.bestPlayer %>
+         </a>
+        <br> <a href="/teams" class="btn btn-primary">back</a>
+      </form>
+     </li>
+     
+     
+      </div>
+    </div>
+         </ul>
+        </div> 
+</body>
+</html>

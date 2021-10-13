@@ -1,34 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include("./partials/head.ejs") %>
+  <%- include("./partials/head.ejs") %>
 
+  <body>
     <%- include("./partials/header.ejs") %>
-<body>
-    <h1>
-        <a href="/teams/new" class="btn btn-primary">Create</a> a New Team
-    </h1>
-    <ul>
-        <% for(let i = 0; i < allTeams.length; i++){ %>
-    <div class="card" style="width: 18rem;">
-        <img src="<%= allTeams[i].teamLogo %>"width="300" height="300" class="card-img-top" alt="...">
-        <div class="card-body">
-
-          
-       <li>
-           <a href="/teams/<%= i %>" class="btn btn-primary">
-           <%= allTeams[i].name %>
-           </a>
-           <a href="/teams/<%= i %>/edit" class="btn btn-primary">EDIT</a>
-           <br><form action="/teams/<%= i %>?_method=DELETE" method="POST">
-            <br><input type="submit" value="DELETE">
-        </form>
-       </li>
-       
-       
-        </div>
+    <main>
+      <div>
+        <a href="/user/signup"><button>Signup</button></a>
+        <a href="/user/login"><button>Login</button></a>
       </div>
-      <% } %>
-           </ul>
-</body>
+    </main>
+  </body>
 </html>
-

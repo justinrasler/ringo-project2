@@ -1,18 +1,9 @@
 {
   "name": "ringo-project2",
   "version": "1.0.0",
-  "description": "",
+  "description": "Heroku deployment",
   "main": "server.js",
-  "dependencies": {
-    "dotenv": "^10.0.0",
-    "ejs": "^3.1.6",
-    "express": "^4.17.1",
-    "method-override": "^3.0.0",
-    "mongoose": "^6.0.7"
-  },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "dev": "nodemon server.js"
   },
@@ -20,10 +11,25 @@
     "type": "git",
     "url": "git+https://github.com/justinrasler/ringo-project2.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/justinrasler/ringo-project2/issues"
   },
-  "homepage": "https://github.com/justinrasler/ringo-project2#readme"
+  "homepage": "https://github.com/justinrasler/ringo-project2#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-mongo": "^4.6.0",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.0.10",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  }
 }

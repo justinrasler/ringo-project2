@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <%- include("../partials/head.ejs") %>
+
+<body>
+    <%- include("../partials/header.ejs") %>
+  <main>
+      
+       
+ <h1> <a href="/teams/new" class="btn btn-primary">Create </a> A New Team</h1>
+
+  <h1><a href="/user/logout"><button>Logout</button></a></h1>
+ 
+
+    <% for (team of teams) { %>
+      <div class="card" style="width: 18rem;">
+        <img src="<%= team.logo %>"width="300" height="300" class="card-img-top" alt="...">
+        <div class="card-body">
+
+        <a href="/teams/<%= team._id %>" class="btn btn-primary">
+          <%= team.name %>
+        </a><br>
+        <a href="/teams/<%= team._id %>/edit" class="btn btn-primary">EDIT</a>
+        <br><form action="/teams/<%= team._id %>?_method=DELETE" method="POST">
+          <br><input type="submit" value="DELETE">
+      </div>
+     </div>   
+      <% } %>
+    </ul>
+    
+    </main>
+  </body>
+</html>
+
+
