@@ -1,5 +1,5 @@
 # ringo-project2
-https://justinrasler-project2.herokuapp.com/teams
+https://justinrasler-project2.herokuapp.com
 ## technologies used
 - javascript
 - html
