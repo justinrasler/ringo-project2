@@ -10,6 +10,8 @@ https://justinrasler-project2.herokuapp.com/teams
 - Express
 - MongoDB
 
+## description
+simple team creator app that allows you choose team name, best player conference, and championships youve won
 
 # trello board with erd
 https://trello.com/b/TaT6BU6f/project-2
